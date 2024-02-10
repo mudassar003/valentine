@@ -71,7 +71,7 @@ const Home: React.FC = () => {
       {yesPressed ? (
         <>
           <Image src="/bearheart.png" width={200} height={100} alt="Bear Kisses" />
-          <div className="text-white font-lobster text-4sm font-bold my-4">Yes! Together, we&apos;ll weave love&apos;s magic.</div>
+          <div className="text-white font-lobster text-4sm text-center font-bold my-4">Yes! Together, we&apos;ll weave love&apos;s magic.</div>
         </>
       ) : (
         <>
