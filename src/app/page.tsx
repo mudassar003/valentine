@@ -1,13 +1,13 @@
 "use client";
 import Head from 'next/head';
 import React, { useState } from 'react';
-import { Inter } from 'next/font/google'
+import { Inter } from 'next/font/google';
 import Image from 'next/image';
- 
+
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
-})
+});
 
 const Home: React.FC = () => {
   const [noCount, setNoCount] = useState<number>(0);
@@ -31,11 +31,11 @@ const Home: React.FC = () => {
       'Are you absolutely certain?',
       'This could be a mistake!',
       'Have a heart!',
-      'Don\'t be so cold!',
+      'Don&apos;t be so cold!',
       'Change of heart?',
-      'Wouldn\'t you reconsider?',
+      'Wouldn&apos;t you reconsider?',
       'Is that your final answer?',
-      'You\'re breaking my heart ;(',
+      'You&apos;re breaking my heart ;(',
     ];
     return phrases[Math.min(noCount, phrases.length - 1)];
   };
@@ -59,9 +59,8 @@ const Home: React.FC = () => {
           className="absolute bottom-0"
           style={{
             left: `${left}%`,
-            animation: `floatUp ${5 + index}s infinite ease-in`, 
+            animation: `floatUp ${5 + index}s infinite ease-in`,
             pointerEvents: 'none',
-            
           }}
         >
           <Image src="/heart.webp" alt="Floating Hearts" width={180} height={80} />
@@ -72,12 +71,12 @@ const Home: React.FC = () => {
       {yesPressed ? (
         <>
           <Image src="/bearheart.png" width={200} height={100} alt="Bear Kisses" />
-          <div className="text-white font-lobster text-4sm font-bold my-4">Yes! Together, we'll weave love's magic.</div>
+          <div className="text-white font-lobster text-4xl font-bold my-4">Yes! Together, we&apos;ll weave love&apos;s magic.</div>
         </>
       ) : (
         <>
           <img className="h-[200px]" src="/bear.gif" alt="Cute Love Bear" />
-          <h1 className="font-lobster text-white text-4xl my-4 text-">Will you be my Valentine?</h1>
+          <h1 className="font-lobster text-white text-4xl my-4">Will you be my Valentine?</h1>
           <div>
             <button
               className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-4"
@@ -90,7 +89,7 @@ const Home: React.FC = () => {
               onClick={handleNoClick}
               className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
             >
-              {noCount === 0 ? 'No' : getNoButtonText()}
+              {getNoButtonText()}
             </button>
           </div>
         </>
